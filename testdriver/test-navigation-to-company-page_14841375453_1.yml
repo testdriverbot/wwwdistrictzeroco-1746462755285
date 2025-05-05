@@ -1,0 +1,21 @@
+version: 4.2.29
+session: 6818ece0290e27180791a1cd
+steps:
+  - prompt: Click on the "Company" link in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Company
+        description: link in the navigation menu at the top of the page
+        action: click
+  - prompt: Assert that the company page loads correctly.
+    commands:
+      - command: assert
+        expect: >-
+          the URL is https://www.districtzero.co/company and the page title is
+          About Us | DistrictZero
+  - prompt: Verify that the company information is displayed correctly.
+    commands:
+      - command: assert
+        expect: >-
+          the heading is "Building the Future of Healthcare Education" and the
+          section title is "Our Story"
