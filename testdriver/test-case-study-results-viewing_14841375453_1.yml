@@ -1,0 +1,19 @@
+version: 4.2.29
+session: 6818ece090973e9f58115f55
+steps:
+  - prompt: Click on the "View Case Study Results" button on the homepage.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: View Case Study Results
+        description: button at the bottom of the homepage
+        action: click
+  - prompt: Assert that the case study results page loads.
+    commands:
+      - command: assert
+        expect: the page displays "Stritch School of Medicine" and case study details
+  - prompt: Verify that the case study details are displayed correctly.
+    commands:
+      - command: assert
+        expect: the page displays "86% Success Rate" and "240x More Efficient"
