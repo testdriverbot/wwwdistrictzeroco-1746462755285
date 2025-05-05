@@ -1,0 +1,19 @@
+version: 4.2.29
+session: 6818ece090973e9f58115f4f
+steps:
+  - prompt: Click on the "News" link in the navigation menu.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: News
+        description: news link in the navigation menu
+        action: click
+  - prompt: Assert that the news page loads correctly.
+    commands:
+      - command: assert
+        expect: News & Insights page is visible
+  - prompt: Verify the news articles are displayed.
+    commands:
+      - command: assert
+        expect: Featured Articles section is visible
