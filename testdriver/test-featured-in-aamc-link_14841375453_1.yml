@@ -1,0 +1,19 @@
+version: 4.2.29
+session: 6818ece090973e9f58115f53
+steps:
+  - prompt: Click on the "Featured in AAMC" link.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Featured in AAMC
+        description: link at the top of the webpage
+        action: click
+  - prompt: Assert that the associated page loads correctly.
+    commands:
+      - command: assert
+        expect: AI-Powered Mentorship for Medical Educators is visible
+  - prompt: Verify the content is as expected on the page.
+    commands:
+      - command: assert
+        expect: AI-Powered Mentorship for Medical Educators is visible
