@@ -1,0 +1,34 @@
+version: 4.2.29
+session: 6818ece190973e9f58115f57
+steps:
+  - prompt: Click on the "Sign In" button in the top right corner.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Sign In
+        description: sign in button in the top right corner
+        action: click
+  - prompt: Enter valid credentials in the email and password fields.
+    commands:
+      - command: hover-text
+        text: Enter your email address
+        description: email input field
+        action: click
+      - command: type
+        text: user@example.com
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: password123
+  - prompt: Click the "Submit" button.
+    commands:
+      - command: hover-text
+        text: Continue
+        description: continue button below the email input
+        action: click
+  - prompt: Assert that the user is redirected to their dashboard.
+    commands:
+      - command: assert
+        expect: We couldn't find an account with those details
