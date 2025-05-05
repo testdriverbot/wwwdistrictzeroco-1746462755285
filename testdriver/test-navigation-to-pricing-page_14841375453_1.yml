@@ -1,0 +1,21 @@
+version: 4.2.29
+session: 6818ece190973e9f58115f59
+steps:
+  - prompt: Click on the "Pricing" link in the navigation menu.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Pricing
+        description: link in the navigation menu
+        action: click
+  - prompt: Assert that the pricing page loads correctly.
+    commands:
+      - command: assert
+        expect: Scale Your Medical Education Program
+  - prompt: Verify that the pricing details are visible and correct.
+    commands:
+      - command: assert
+        expect: 240x More Efficient
+      - command: assert
+        expect: 86% Success Rate
