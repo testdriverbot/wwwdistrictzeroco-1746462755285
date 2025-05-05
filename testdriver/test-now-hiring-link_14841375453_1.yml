@@ -1,0 +1,19 @@
+version: 4.2.29
+session: 6818ece190973e9f58115f5d
+steps:
+  - prompt: Click on the "Now Hiring" link in the navigation menu.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Now Hiring
+        description: navigation menu link for job opportunities
+        action: click
+  - prompt: Assert that the careers page loads correctly.
+    commands:
+      - command: assert
+        expect: the page displays "Join Our Team" and "Open Positions"
+  - prompt: Verify the list of current job openings.
+    commands:
+      - command: assert
+        expect: the page displays "Open Positions" and "Digital Marketing Intern"
