@@ -1,0 +1,11 @@
+version: 4.2.29
+session: 6818ece190973e9f58115f5a
+steps:
+  - prompt: Click on the "Schedule a Discussion" button on the homepage.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Schedule a Discussion
+        description: button to schedule a discussion on the homepage
+        action: click
