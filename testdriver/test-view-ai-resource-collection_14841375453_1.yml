@@ -1,0 +1,17 @@
+version: 4.2.29
+session: 6818ece090973e9f58115f51
+steps:
+  - prompt: Click on the "View AI Resource Collection" link.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: View AI Resource Collection
+        description: link to view AI resources in the header
+        action: click
+      - command: assert
+        expect: DistrictZero AI-Enabled Mentorship is visible on the page
+  - prompt: Verify the presence of resource materials.
+    commands:
+      - command: assert
+        expect: Explore the full case study is visible on the page
